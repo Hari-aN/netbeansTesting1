@@ -12,9 +12,25 @@
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>2</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>FileUploadDBServlet</servlet-name>
+        <servlet-class>FileUploadDBServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>RetrieveImage</servlet-name>
+        <servlet-class>RetrieveImage</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FileUploadDBServlet</servlet-name>
+        <url-pattern>/FileUploadDBServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RetrieveImage</servlet-name>
+        <url-pattern>/RetrieveImage</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

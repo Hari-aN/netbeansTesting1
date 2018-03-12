@@ -16,5 +16,7 @@
                 welcome page and also update the welcome-file setting in</i>
             <tt>web.xml</tt>.</p>
         <a href="Upload.jsp"><h1>Upload your data.</h1></a>
+        <a href="sendMail.jsp"><h1>Email your data(using JSP).</h1></a>
+        <a href="SendMail.html"><h1>Email your data(using html,servlet,java class).</h1></a>
     </body>
 </html>

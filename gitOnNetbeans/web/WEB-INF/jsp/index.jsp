@@ -18,5 +18,6 @@
         <a href="Upload.jsp"><h1>Upload your data.</h1></a>
         <a href="sendMail.jsp"><h1>Email your data(using JSP).</h1></a>
         <a href="SendMail.html"><h1>Email your data(using html,servlet,java class).</h1></a>
+           <a href=""><h1>Email your data(using geotag api).</h1></a>
     </body>
 </html>

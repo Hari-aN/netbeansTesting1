@@ -1,47 +1,37 @@
-<%@page import = "java.sql.*"%>
-<%@page import = "java.io.*"%>
-<%
-    Connection connection = null;
-    //login is the name of the database
-    String connectionURL = "jdbc:mysql://localhost:3306/harian";
-     
-    ResultSet rs = null;
-     
-    PreparedStatement psmnt = null;
-     
-    InputStream sImage;
-    try
-    {
-    Class.forName("com.mysql.jdbc.Driver").newInstance();
-    connection = DriverManager.getConnection(connectionURL, "root", "root");
-    //Student is the table name
-    psmnt = connection.prepareStatement("SELECT photo FROM contacts");
-    //In id "6" i have the image.
-    //psmnt.setString(1, "6");
-    rs = psmnt.executeQuery();
-    if(rs.next())
-    {
-    byte[] bytearray = new byte[1048576];
-    int size=0;
-    sImage = rs.getBinaryStream(1);
-    response.reset();
-    response.setContentType("image/jpeg");
-    while((size=sImage.read(bytearray))!= -1 )
-    {
-    response.getOutputStream().write(bytearray,0,size);
-    }
-    response.flushBuffer();
-    sImage.close();
-    rs.close();
-     
-    }
-    }
-    catch(Exception ex)
-    {
-    out.println(ex);
-    }
-     
-     
-    psmnt.close();
-    connection.close();
-%>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="java.sql.Statement" %>
+<%@ page import="java.sql.Connection" %>
+<%@ page import="java.sql.DriverManager" %>
+
+<form method="post">
+
+<table border="2">
+   <tr>
+        <td>user ID</td>
+        <td>Birthday</td>
+        <td>Gender</td>
+        <td>First Name</td>
+        <td>Last Name</td>
+   </tr>
+   <%
+   try
+   {
+       Class.forName("com.mysql.jdbc.Driver");
+       String url="jdbc:mysql://localhost:3306/eyetracker";
+       String username="root";
+       String password="root";
+       String query="select * from eyetracker";
+       Connection conn=DriverManager.getConnection(url, username, password);
+       Statement stmt=conn.createStatement();
+       ResultSet rs=stmt.executeQuery(query);
+       while(rs.next())
+       {
+   %>
+           <tr><td><%rs.getInt("userID"); %></td></tr>
+           <tr><td><%rs.getDate("dob"); %></td></tr>
+           <tr><td><%rs.getString("gender"); %></td></tr>
+           <tr><td><%rs.getString("firstName"); %></td></tr>
+           <tr><td><%rs.getString("lastName"); %></td></tr>
+
+   <%
+       }

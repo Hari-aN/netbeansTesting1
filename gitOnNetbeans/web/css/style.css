@@ -1,0 +1,158 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12 Mar, 2018, 1:30:24 PM
+    Author     : Baseem
+*/
+html, body, div, h1, h2, h3, h4, h5, h6, p, img, dl,
+  dt, dd, ol, ul, li, table, tr, td, form, object, embed,
+  article, aside, command, details, fieldset,
+  figcaption, figure, footer, group, header, hgroup, legend
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+html {
+  font: 82.5% verdana, helvetica, sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1;
+  direction: ltr;
+}
+html, body {
+  position: absolute;
+  height: 100%;
+  min-width: 100%;
+}   
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+.signin-header {
+  padding: 10px 12px 5px;
+  background:#00AAFF;
+  border: 1px solid #e5e5e5;
+  width: 362px;
+  float: right;
+}
+.signin-box {
+  padding: 20px 25px 15px;
+  background:#DEDEDE;
+  border: 1px solid #e5e5e5;
+  width: 335px;
+  float: right;
+}
+
+.button {
+  min-width: 46px;
+  text-align: center;
+  color: #444;
+  font-size: 11px;
+  font-weight: bold;
+  height: 27px;
+  padding: 0 8px;
+  line-height: 27px;
+  border-radius: 2px;
+  transition: all 0.218s;
+  border: 1px solid #dcdcdc;
+  background-color: #f5f5f5;
+  cursor: default;
+}
+
+*+html .button {
+  min-width: 70px;
+}
+
+button.button,
+input[type=submit].button {
+  height: f1f1f1px;
+  line-height: 29px;
+  vertical-align: bottom;
+  margin: 0;
+}
+
+.button:hover {
+  border: 1px solid #c6c6c6;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.0s;
+  background-color: #f8f8f8;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+}
+.button:active {
+  background-color: #f6f6f6;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+.button:visited {
+  color: #666;
+}  
+.button-submit {
+  border: 1px solid #3079ed;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.1);
+  background-color: #4d90fe;
+}
+.button-submit:hover {
+  border: 1px solid #2f5bb7;
+  color: #fff;
+  text-shadow: 0 1px rgba(0,0,0,0.3);
+  background-color: #357ae8;
+}
+button-submit:active {
+  background-color: #357ae8;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.footer-bar {
+  position: absolute;
+  bottom: 0;
+  height: 35px;
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  overflow: hidden;
+}
+.footer {
+  padding-top: 9px;
+  font-size: .85em;
+  white-space: nowrap;
+  line-height: 0;
+}
+.footer ul {
+  color: #999;
+  float: left;
+  max-width: 80%;
+}
+.footer ul li {
+  display: inline;
+  padding: 0 1.5em 0 0;
+}
+.footer a {
+  color: #333;
+}
+.footer .lang-chooser-wrap {
+  float: right;
+  max-width: 20%;
+}
+.footer .lang-chooser-wrap img {
+  vertical-align: middle;
+}
+.footer .attribution {
+  float: right;
+}
+.footer .attribution span {
+  vertical-align: text-top;
+}
+.content {
+  padding: 0 44px;
+}
+
+.table {
+  padding: 0 55px
+}
